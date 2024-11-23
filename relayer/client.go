@@ -168,7 +168,7 @@ func CreateClient(
 		zap.Duration("trust_period", tp),
 	)
 
-	ubdPeriod := overrideUnbondingPeriod
+	ubdPeriod := 1209600 * time.Second
 	if ubdPeriod == 0 {
 		// Query the unbonding period for dst and retry if the query fails
 		if err := retry.Do(func() error {

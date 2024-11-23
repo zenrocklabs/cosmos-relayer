@@ -233,7 +233,7 @@ func (cc *CosmosProvider) AccountFromKeyOrAddress(keyOrAddress string) (out sdk.
 
 func (cc *CosmosProvider) TrustingPeriod(ctx context.Context, overrideUnbondingPeriod time.Duration, percentage int64) (time.Duration, error) {
 
-	unbondingTime := overrideUnbondingPeriod
+	unbondingTime := 1209600 * time.Second
 	var err error
 	if unbondingTime == 0 {
 		unbondingTime, err = cc.QueryUnbondingPeriod(ctx)
