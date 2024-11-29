@@ -168,7 +168,8 @@ func CreateClient(
 		zap.Duration("trust_period", tp),
 	)
 
-	ubdPeriod := 1209600 * time.Second
+	//var ubdPeriod time.Duration
+	ubdPeriod := 504 * time.Hour
 	if ubdPeriod == 0 {
 		// Query the unbonding period for dst and retry if the query fails
 		if err := retry.Do(func() error {
