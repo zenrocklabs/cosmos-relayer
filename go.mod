@@ -2,6 +2,8 @@ module github.com/cosmos/relayer/v2
 
 go 1.21
 
+replace github.com/strangelove-ventures/cometbft-client => github.com/zenrocklabs/cometbft-client v0.0.0-20241203104130-a99cd107a376
+
 require (
 	cosmossdk.io/api v0.7.3
 	cosmossdk.io/errors v1.0.1
